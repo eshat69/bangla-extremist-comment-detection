@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bangla Extremist Comment Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Bangla Extremist Comment Detection</h1>
+
+        <form action="/predict" method="post">
+
+            <textarea name="comment" rows="6" placeholder="বাংলা মন্তব্য লিখুন"></textarea>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result
+        {% if prediction_text == 'Extremist' %}
+            extremist
+        {% else %}
+            non-extremist
+        {% endif %}
+    ">
+            Prediction: {{ prediction_text }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
