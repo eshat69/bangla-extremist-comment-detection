@@ -10,15 +10,10 @@
 <body>
 
     <div class="container">
-
         <h1>Bangla Extremist Comment Detection</h1>
-
         <form action="/predict" method="post">
-
             <textarea name="comment" rows="6" placeholder="বাংলা মন্তব্য লিখুন"></textarea>
-
             <button type="submit">Predict</button>
-
         </form>
 
         {% if prediction_text %}
@@ -34,7 +29,6 @@
         {% endif %}
 
     </div>
-
 </body>
 
 </html>
